@@ -1,0 +1,908 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#restaurant-logo{
+    width: 10rem;
+}
+
+header{
+    background: linear-gradient(rgba(0,0,45,0.5),rgba(0,0,20,0.5)), url('../images_folder/elevated-view-fresh-vegetables-black-backdrop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar.sticky{
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#nav-links li{
+    list-style: none;
+    padding: 0 0.25rem;
+    margin: 0 0.55rem;
+}
+
+#nav-links li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#nav-links li a:hover{
+    color: #20d167b6;
+}
+
+#nav-links li a:active{
+    color: #000045;
+}
+
+#signup-btn{
+    border: none;
+    outline: none;
+    background-color: #33cc33;
+    padding:6px 14px;
+    cursor: pointer;
+    margin-left: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+#login-btn{
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+    padding: 6px 14px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 1rem;
+    color: #33dd33;
+}
+
+#signup-btn:active{
+    transform: scale(0.98);
+}
+
+#login-btn:active{
+    transform: scale(0.98);
+}
+
+.hamburger, .close {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger .fa-bars{
+    color: #ffffff;
+}
+
+.close .fa-times{
+    color: #ffffff;
+}
+
+@media (max-width: 768px){
+    #restaurant-logo{
+        width: 8rem;
+    }
+
+    .navbar{
+        padding: 1rem;
+    }
+
+    #nav-links{
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        background-color: #333;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 9; 
+        padding-top: 2.5rem;
+        padding-left: 1.7rem;
+    }
+
+    #nav-links a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #333;
+    }
+
+    #nav-links li {
+        margin: 5px 0;
+        border-bottom: 1px solid #222;
+        padding-bottom: 10px;
+    }
+
+    .button-container{
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    #signup-btn {
+        padding: 8px 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #33cc33;
+        border: none;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #login-btn{
+        padding: 8px 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #f2f2f2;
+        border: none;
+        color: #33dd33;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #signup-btn:hover {
+        background-color: #44bb44;
+    }
+
+    #login-btn:hover{
+        background-color: #44bb44;
+        color: #ffffff;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .close {
+        display: none; 
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size: 30px;
+        color: #fff;
+        z-index: 10;
+    }
+
+    #nav-links.active {
+        transform: translateX(0);
+    }
+
+    .hamburger.active {
+        display: none;
+    }
+
+    .close.active {
+        display: block;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 8; 
+    }
+
+    .overlay.active {
+        display: block;
+    }
+}
+
+/* @media (min-width: 500px) and (max-width: 768px){
+    #restaurant-logo{
+        width: 9rem;
+    }
+
+    .navbar{
+        padding: 1.5rem;
+    }
+
+    #nav-links{
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        background-color: #333;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 9; 
+    }
+
+    #nav-links li {
+        margin: 5px 0;
+        font-size: 22px;
+    }
+
+    #signup-btn{
+        padding:12px 8px;
+        margin-left: -0.01rem;
+        margin-bottom: 0.5rem;
+        color: #fff;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .close {
+        display: none; 
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size: 40px;
+        color: #fff;
+        z-index: 10;
+    }
+
+    #nav-links.active {
+        transform: translateX(0);
+    }
+
+    .hamburger.active {
+        display: none;
+    }
+
+    .close.active {
+        display: block;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 8; 
+    }
+
+    .overlay.active {
+        display: block;
+    }
+} */
+
+
+/* Header-Container Section (Menu Section) */
+.header-container{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#s-head{
+    color: #f2f2f2;
+    letter-spacing: 5px;
+    padding-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.separator{
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+}
+
+#l-head{
+    font-size: 62px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+/* Responsive media query  */
+@media (min-width: 200px) and (max-width: 425px){
+    .header-container{
+        width: 310px;
+    }
+
+    #l-head{
+        font-size: 36px;
+        font-weight: 500;
+        color: #ffffff;
+        letter-spacing: 2px;
+    }
+}
+
+
+/* Appetizers, Main Dishes & Desserts Section */
+.menu-container{
+    padding: 50px 0;
+}
+
+.sub-menu{
+    text-align: center;
+}
+
+#smallMenuText {
+    color: #777;
+    letter-spacing: 5px;
+    padding-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+
+#largeMenuText{
+    font-size: 38px;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: space-around;
+    margin: 50px auto 50px auto;
+}
+
+.menu-column {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 45%;
+    background: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.menu-column img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.small-text {
+    font-size: 12px;
+    color: gray;
+    flex-grow: 1;
+}
+
+.price {
+    background: #4caf50;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#menu-name {
+    margin: 0px 0;
+    font-size: 18px;
+}
+
+#sub-descrip {
+    margin: 0px 0;
+    font-size: 12px;
+}
+
+
+/* Responsive Styles */
+
+/* For screens between 200px and 425px */
+@media (min-width: 200px) and (max-width: 425px) {
+    .menu-column {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .menu-column img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .sub {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .small-text {
+        margin-bottom: 5px;
+    }
+
+    .price {
+        margin-top: 5px;
+    }
+
+    #menu-name {
+        font-size: 16px;
+    }
+
+    #sub-descrip {
+        font-size: 14px;
+    }
+}
+
+/* For screens between 500px and 768px */
+@media (min-width: 500px) and (max-width: 768px) {
+    .menu-column {
+        width: 100%;
+    }
+
+    .menu-column img {
+        width: 90px;
+        height: 90px;
+        margin-right: 15px;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    #menu-name {
+        font-size: 17px;
+    }
+
+    #sub-descrip {
+        font-size: 15px;
+    }
+}
+
+
+
+/* Private Event Section */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 95%;
+    margin: 50px auto;
+    /* max-width: 1200px; */
+    height: 70%;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.event-details {
+    text-align: center;
+}
+
+.event-details h1 {
+    font-size: 32px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.booking-request {
+    font-size: 1.2em;
+}
+
+.phone-number {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #33cc33;
+    color: #fff;
+    border: none;
+    padding: 7px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #11aa44;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .column {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    img {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-details h1 {
+        font-size: 1.5em;
+    }
+
+    .event-details p, .booking-request {
+        font-size: 1em;
+    }
+
+    .phone-number {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+/* Online Reservation Section */
+.online-reservation-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.reservation-form, .offer {
+    position: relative;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.03);
+    flex: 1 1 300px;
+    overflow: hidden;
+}
+
+.reservation-form::before, .offer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('../images_folder/round-table-arrangement-restaurant.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.reservation-form {
+    max-width: 700px;
+}
+
+.reservation-form h1 {
+    margin: 0 0 10px;
+    font-weight: 700;
+    color: #f1f1f1;
+}
+
+.reservation-form p {
+    margin: 0 0 20px;
+    color: #f1f1f1;
+}
+
+.reservation-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    flex: 1 1 30%;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #222;
+    outline: none;
+}
+
+.form-group textarea {
+    flex: 1 1 100%;
+    resize: none;
+}
+
+#reservation-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #33cc33;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reservation-btn:hover {
+    background-color: #11bc88;
+}
+
+.offer {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.offer h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 13px;
+    color: #f1f1f1;
+}
+
+.offer p {
+    margin: 0;
+    font-size: 20px;
+    color: #f1f1f1;
+}
+
+.discount {
+    background-color: #444;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.discount p:nth-child(1) {
+    margin: 0;
+    font-size: 10px;
+}
+
+.discount p:nth-child(2) {
+    margin: 4px 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.discount p:nth-child(3) {
+    margin: 0;
+    font-size: 10px;
+}
+
+.offer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.offer ul li {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #f1f1f1;
+}
+
+@media (max-width: 600px) {
+    .form-group input, .form-group select, .form-group textarea {
+        flex: 1 1 100%;
+        margin: 5px 0;
+    }
+
+    .discount p:nth-child(1) {
+        font-size: 16px;
+    }
+
+    .discount p:nth-child(2) {
+        font-size: 28px;
+    }
+
+    .discount p:nth-child(3) {
+        font-size: 16px;
+    }
+}
+
+
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    color: white;
+    padding-top: 40px;
+    
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    color: #33cc33;
+    margin-bottom: 10px;
+}
+
+.footer-column p, .footer-column ul, .footer-column a {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #22aa22;
+}
+
+.footer-social a {
+    color: white;
+    margin-right: 10px;
+}
+
+.footer-social a:hover {
+    color: #11aa44;
+}
+
+.instagram-gallery a {
+    display: inline-block;
+    margin: 5px;
+}
+
+.instagram-gallery img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #111;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (min-width: 200px) and (max-width: 425px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        min-width: 100%;
+    }
+
+    .instagram-gallery img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 500px) {
+    
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        min-width: 100%;
+    }
+
+    .instagram-gallery img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* Scroll To Top Section */
+#scrollBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+}
+  
+.bi-arrow-up-circle-fill {
+    font-size: 40px;
+    color: #002345;
+}

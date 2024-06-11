@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricom Dining Co. | Gallery</title>
+
+    <!-- Animate On Scroll Library (AOS) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Stylesheet Link -->
+    <link rel="stylesheet" href="../stylesheets/gallery.css">
+
+    <!-- Font Style LInk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Font Awesome Icons Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/index.html"><img id="restaurant-logo" src="../images_folder/Rational.png" alt="logo"></a>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul id="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="../html/about.html">About Us</a></li>
+                <li><a href="../html/menu.html">Menu</a></li>
+                <li><a href="../html/reservation.html">Reservations</a></li>
+                <li><a href="../html/contact.html">Contact Us</a></li>
+                <li><a href="../html/gallery.html" id="active-link">Gallery</a></li>
+                <li><a href="../html/order.html">Order Online</a></li>
+                <div class="button-container">
+                    <a href="../html/signup.html" id="signup-btn">Sign Up</a>
+                    <a href="../html/login.html" id="login-btn">Login</a>
+                </div>
+            </ul>
+            <div class="close" id="close">
+                <i class="fa fa-times"></i>
+            </div>
+        </nav>
+
+        <div class="header-container">
+            <h6 id="s-head">Amazing Images</h6>
+            <img class="separator" src="../images_folder/separator.svg" alt="separator">
+            <h1 id="l-head">Gallery</h1>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <div class="row">
+      <div class="column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <img src="../images_folder/confident-head-cook-standing-restaurant-professional-kitchen-with-arms-crossed-while-smiling-camera-sous-chef-wearing-cooking-uniform-while-preparing-ingredients-dinner-service.jpg" alt="confident-head-cook-standing-restaurant-professional-kitchen-with-arms-crossed-while-smiling-camera-sous-chef-wearing-cooking-uniform-while-preparing-ingredients-dinner-service">
+        <img src="../images_folder/cocktail-topped-with-orange-slice.jpg">
+        <img src="../images_folder/colorful-baked-with-cheese-stuffed-peppers-with-minced-meat.jpg">
+        <img src="../images_folder/delicious-hummus-plate-still-life-view.jpg">
+        <img src="../images_folder/delicious-meat-table.jpg">
+        <img src="../images_folder/pexels-designecologist-3458448.jpg">
+        <img src="../images_folder/closeup-roasted-meat-with-sauce-vegetables-fries-plate-table.jpg">
+        <img src="../images_folder/juicy-steak-medium-rare-beef-with-spices-grilled-vegetables.jpg">
+      </div>
+      <div class="column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <img src="../images_folder/wooden-board-with-cooked-meat.jpg">
+        <img src="../images_folder/traditional-delicious-gulas-dish-assortment.jpg">
+        <img src="../images_folder/top-view-arrangement-with-delicious-local-food-dish.jpg">
+        <img src="../images_folder/table_reservation.jpg">
+        <img src="../images_folder/side-view-blurry-people-indoors.jpg">
+        <img src="../images_folder/pexels-valeriya-20184678.jpg">
+      </div>
+      <div class="column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <img src="../images_folder/pexels-valeriya-20184671.jpg">
+        <img src="../images_folder/pexels-valeriya-20184670.jpg">
+        <img src="../images_folder/pexels-thuyenvu-297756.jpg">
+        <img src="../images_folder/pexels-shvets-2574489.jpg">
+        <img src="../images_folder/pexels-scottwebb-305832.jpg">
+        <img src="../images_folder/featured-10.jpg">
+      </div>
+      <div class="column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <img src="../images_folder/pexels-rachel-claire-5531012.jpg">
+        <img src="../images_folder/delicious-hummus-plate-still-life-view.jpg">
+        <img src="../images_folder/colorful-baked-with-cheese-stuffed-peppers-with-minced-meat.jpg">
+        <img src="../images_folder/interior.png">
+        <img src="../images_folder/pexels-thuyenvu-297756.jpg">
+      </div>
+      <!-- <br><br> -->
+
+      <!-- Modal for displaying full-size image -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+
+        <!-- Navigation buttons for next and previous images -->
+        <span class="prev" onclick="prevImage()">&#10094;</span>
+        <span class="next" onclick="nextImage()">&#10095;</span>
+      </div>
+    </div>
+
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Rational</h3>
+                    <p>
+                        Curabitur posuere felis in massa pulvinar, nec mollis nibh       eleifend. Maecenas turpis mi. Vivamus pulvinar lobortis vehicula pellentesque.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="../html/about.html">About Us</a></li>
+                        <li><a href="../html/menu.html">Menu</a></li>
+                        <li><a href="../html/gallery.html">Gallery</a></li>
+                        <li><a href="../html/reservation.html">Reservation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Other Links</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="../html/order.html">Order Online</a></li>
+                        <li><a href="../html/signup.html">Sign Up</a></li>
+                        <li><a href="../html/login.html">Login</a></li>
+                        <li><a href="../html/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Instagram Gallery</h3>
+                    <div class="instagram-gallery">
+                        <a href="../html/gallery.html"><img src="../images_folder/cocktail-topped-with-orange-slice.jpg" alt="Image 1"></a>
+                        <a href="../html/gallery.html"><img src="../images_folder/grilled-chicken-steak-vegetables-marble-background.jpg" alt="Image 2"></a>
+                        <a href="../html/gallery.html"><img src="../images_folder/pexels-thuyenvu-297756.jpg" alt="pexels-thuyenvu-297756"></a>
+                        <a href="../html/gallery.html"><img src="../images_folder/pizza & coke.jpg" alt="Image 4"></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>203, Mother is Good, Behind Kojo Str, Maria, Dansoman.</p>
+                    <p><i class="fa fa-phone"></i> 888-7010-7010</p>
+                    <p><i class="fa fa-phone"></i> +233 934-759-8561</p>
+                    <p><i class="fa fa-envelope"></i> info@ricom.com</p>
+                    <p><i class="fa fa-envelope"></i> services@ricom.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2024 Ricom Ghana. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <i onclick="scrollToTop()" id="scrollBtn" class="bi bi-arrow-up-circle-fill"></i>
+
+    <!-- JavaScript Section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+    <script src="../javascripts/gallery.js"></script>
+    <script>
+         window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) { 
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>

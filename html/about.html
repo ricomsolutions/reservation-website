@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricom Dining Co. | About</title>
+
+    <!-- Animate On Scroll Library (AOS) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Stylesheet Link -->
+    <link rel="stylesheet" href="../stylesheets/about.css">
+
+    <!-- Font Style LInk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Font Awesome Icons Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/index.html"><img id="restaurant-logo" src="../images_folder/Rational.png" alt="logo"></a>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul id="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="../html/about.html" id="active-link">About Us</a></li>
+                <li><a href="../html/menu.html">Menu</a></li>
+                <li><a href="../html/reservation.html">Reservations</a></li>
+                <li><a href="../html/contact.html">Contact Us</a></li>
+                <li><a href="../html/gallery.html">Gallery</a></li>
+                <li><a href="../html/order.html">Order Online</a></li>
+                <div class="button-container">
+                    <a href="../html/signup.html" id="signup-btn">Sign Up</a>
+                    <a href="../html/login.html" id="login-btn">Login</a>
+                </div>
+            </ul>
+            <div class="close" id="close">
+                <i class="fa fa-times"></i>
+            </div>
+        </nav>
+
+        <div class="header-container">
+            <h4 id="s-head">Our Story</h4>
+            <img class="separator" src="../images_folder/separator.svg" alt="separator">
+            <h1 id="l-head">About Us</h1>
+        </div>
+    </header>
+
+    <!-- Who We Are Section -->
+    <section class="whoWeAre-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="whoWeAre-sub-container">
+            <h4 id="s-whoWeAre">who we are</h4>
+            <img class="separator" src="../images_folder/separator.svg" alt="">
+            <br>
+            <p id="whoWeAre-text">
+                A modern restaurant with a menu that will make your mouth water. Servicing delicious food since 45 years. Enjoy our seasonal menu and experience the beauty of naturalness.
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="left">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived.</p>
+
+                <div class="signature">
+                    <img src="../images_folder/png-transparent-signature-signature-angle-text-monochrome-thumbnail-removebg-preview.png" alt="Signature">
+                    <p id="founder">Andrew Joe - Founder</p>
+                </div>
+                <div class="video-container">
+                    <img src="../images_folder/pizza & coke.jpg" alt="Chef" class="video-image">
+                    <div class="wave-button" onclick="playVideo()">
+                        <div class="wave"></div>
+                        <div class="wave"></div>
+                        <div class="wave"></div>
+                        <div class="play-icon">&#9658;</div>
+                    </div>
+                    <video id="video" class="video" controls>
+                        <source src="../images_folder/7709365-hd_1920_1080_25fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="center">
+                <img src="../images_folder/pexels-rachel-claire-5490965.jpg" alt="Restaurant">
+            </div>
+            <div class="right">
+                <div class="info">
+                    <h3>Lunch Time</h3>
+                    <p>Monday to Sunday<br>11.00 am - 2.30 pm</p>
+                    <h3>Dinner Time</h3>
+                    <p>Monday to Sunday<br>5.30 pm - 11.30 pm</p>
+                    <h3>Contact Us</h3>
+                    <p>Restaurant St, Delicious City, Ghana 1957, Accra<br>+233-123-123456<br>reservation@ricom.com</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="counter-container">
+            <div class="counter">
+                <span class="number" data-target="20">20</span>+
+                <p class="text">Daily Orders</p>
+            </div>
+            <div class="counter">
+                <span class="number" data-target="7">7</span>+
+                <p class="text">Special Dishes</p>
+            </div>
+            <div class="counter">
+                <span class="number" data-target="8">8</span>+
+                <p class="text">Expert Chefs</p>
+            </div>
+            <div class="counter">
+                <span class="number" data-target="3">3</span>+
+                <p class="text">Awards Won</p>
+            </div>
+        </section>
+    </section>
+
+    <main>
+        <section class="menu-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="menu-image">
+                <img src="../images_folder/confident-head-cook-standing-restaurant-professional-kitchen-with-arms-crossed-while-smiling-camera-sous-chef-wearing-cooking-uniform-while-preparing-ingredients-dinner-service.jpg" alt="confident-head-cook-standing-restaurant-professional-kitchen-with-arms-crossed-while-smiling-camera-sous-chef-wearing-cooking-uniform-while-preparing-ingredients-dinner-service" loading="lazy">
+            </div>
+            <div class="menu-content">
+                <div class="menu-sub-content">
+                    <h4 id="s-menu-head">35 years of experience</h4>
+                    <img class="separator-3" src="../images_folder/separator.svg" alt="separator">
+                    <h1 id="l-menu-head">Award winning Chef</h1>
+                    <p id="menu-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime facilis nesciunt, blanditiis vitae totam culpa officia repellat, similique dicta tempore fugiat?
+                    </p>
+                    <img id="signature-image" src="../images_folder/png-transparent-signature-signature-angle-text-monochrome-thumbnail-removebg-preview.png" alt="Signature">
+                    <p id="founder">Ram Range - Founder</p>
+                    <br>
+                    <a class="menu-link" href="../html/team.html">Meet Our Team</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="menu-content">
+                <div class="menu-sub-content">
+                    <h4 id="s-menu-head">Delightful experience</h4>
+                    <img class="separator-3" src="../images_folder/separator.svg" alt="separator">
+                    <h1 id="l-menu-head">Dinner, Event or Party</h1>
+                    <p id="menu-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime facilis nesciunt, blanditiis vitae totam culpa officia repellat, similique dicta tempore fugiat?
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum nulla provident unde modi iste. Numquam!
+                    </p>
+                    <br>
+                    <a class="menu-link" href="#">Discover Now</a>
+                </div>
+            </div>
+            <div class="menu-image">
+                <img src="../images_folder/person-enjoying-food-restaurant.jpg" alt="person-enjoying-food-restaurant" loading="lazy">
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Our Services Section -->
+    <main class="ourServices" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="whoWeAre-sub-container">
+            <h4 id="s-whoWeAre">who we are</h4>
+            <img class="separator" src="../images_folder/separator.svg" alt="">
+            <br>
+            <p id="whoWeAre-text">
+                Exquisite Restaurant In The City
+            </p>
+        </div>
+
+        <div class="ourServices-container">
+            <div class="service" id="door-delivery">
+                <div class="service-content">
+                    <div class="icon"><img src="../images_folder/door-door_5966030.png" alt="Door Delivery Icon"></div>
+                    <div class="ourService-text">
+                        <h2>Door Delivery</h2>
+                        <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service reverse" id="outdoor-catering">
+                <div class="service-content">
+                    <div class="icon"><img src="../images_folder/delivery-van_9360134.png" alt="Outdoor Catering Icon"></div>
+                    <div class="ourService-text">
+                        <h2>Outdoor Catering</h2>
+                        <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="center-image">
+                <img src="../images_folder/7a09499e-f09d-49c6-bf7d-1f403bc57976-removebg-preview.png" alt="Food Plate">
+            </div>
+            <div class="service" id="fine-dining">
+                <div class="service-content">
+                    <div class="icon"><img src="../images_folder/restaurant_531021.png" alt="Fine Dining Icon"></div>
+                    <div class="ourService-text">
+                        <h2>Fine Dining</h2>
+                        <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service reverse" id="banquets-hall">
+                <div class="service-content">
+                    <div class="icon"><img src="../images_folder/wedding_13804047.png" alt="Banquets Hall Icon"></div>
+                    <div class="ourService-text">
+                        <h2>Banquets Hall</h2>
+                        <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--------------- Testimonials ------------->
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p class="review">The taste of food was really amazing. Wow! Outstanding dinner made by Master chef John Rute, I never forget this delicious food experience.</p>
+            <div class="profile">
+                <img src="../images_folder/Miles.png" alt="Elisa Joe">
+                <div class="profile-info">
+                    <h4>Willium Joe</h4>
+                    <p>James Town</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p class="review">Hygienic food & fresh environment, everyone had a wonderful delight experience. It was FABULOUS! Great experience at The Italian gourmet.</p>
+            <div class="profile">
+                <img src="../images_folder/Elisa.png" alt="Theresa Tin">
+                <div class="profile-info">
+                    <h4>Theresa Tin</h4>
+                    <p>Tema</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p class="review">Special treat to dine, it was a wow experience. The food was really delicious! Outstanding dinner made by Master chef, food experience was unforgettable!</p>
+            <div class="profile">
+                <img src="../images_folder/testimonial_img_2.jpg" alt="Michel Byrd">
+                <div class="profile-info">
+                    <h4>Michel Byrd</h4>
+                    <p>Accra</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Rational</h3>
+                    <p>
+                        Curabitur posuere felis in massa pulvinar, nec mollis nibh       eleifend. Maecenas turpis mi. Vivamus pulvinar lobortis vehicula pellentesque.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="../html/about.html">About Us</a></li>
+                        <li><a href="../html/menu.html">Menu</a></li>
+                        <li><a href="../html/gallery.html">Gallery</a></li>
+                        <li><a href="../html/reservation.html">Reservation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Other Links</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="/index.html">Order Online</a></li>
+                        <li><a href="../html/signup.html">Sign Up</a></li>
+                        <li><a href="../html/login.html">Login</a></li>
+                        <li><a href="../html/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Instagram Gallery</h3>
+                    <div class="instagram-gallery">
+                        <a href="../html/gallery.html"><img src="../images_folder/cocktail-topped-with-orange-slice.jpg" alt="Image 1"></a>
+                        <a href="../html/gallery.html"><img src="../images_folder/grilled-chicken-steak-vegetables-marble-background.jpg" alt="Image 2"></a>
+                        <a href="../html/gallery.html"><img src="../images_folder/pexels-thuyenvu-297756.jpg" alt="pexels-thuyenvu-297756"></a>
+                        <a href="../html/gallery.html"><img src="../images_folder/pizza & coke.jpg" alt="Image 4"></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>203, Mother is Good, Behind Kojo Str, Maria, Dansoman.</p>
+                    <p><i class="fa fa-phone"></i> 888-7010-7010</p>
+                    <p><i class="fa fa-phone"></i> +233 934-759-8561</p>
+                    <p><i class="fa fa-envelope"></i> info@ricom.com</p>
+                    <p><i class="fa fa-envelope"></i> services@ricom.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2024 Ricom Ghana. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <i onclick="scrollToTop()" id="scrollBtn" class="bi bi-arrow-up-circle-fill"></i>
+
+    <!-- JavaScript Section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+    <script src="../javascripts/about.js"></script>
+    <script>
+         window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) { 
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>

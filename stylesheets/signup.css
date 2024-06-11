@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    
+    /* background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,12,40,0.7), rgba(0,0,0,0.4)), url('../images_folder/reservation.jpg'); */
+    background-color: #F9F9FA;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    /* padding: 20px; */
+    background-color: transparent;
+    /* border-radius: 10px; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-wrapper {
+    text-align: center;
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #888;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #2bf01d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #33cc33;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 2px solid #ddd;
+}
+
+.divider::before {
+    margin-right: 10px;
+}
+
+.divider::after {
+    margin-left: 10px;
+}
+
+.divider span {
+    color: #888;
+    font-size: 12px;
+}
+
+.social-login {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.social-icons a.facebook {
+    color: #3b5998;
+}
+
+.social-icons a.linkedin {
+    color: #0077b5;
+}
+
+.social-icons a.twitter {
+    color: #1da1f2;
+}
+
+.social-icons a.google {
+    color: #db4437;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #000045;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+}

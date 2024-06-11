@@ -1,0 +1,575 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#restaurant-logo{
+    width: 10rem;
+}
+
+header{
+    background: linear-gradient(rgba(0,0,45,0.8),rgba(0,0,20,0.6),rgba(0,0,45,0.5) ), url('../images_folder/pexels-valeriya-20184671.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar.sticky{
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#nav-links li{
+    list-style: none;
+    padding: 0 0.25rem;
+    margin: 0 0.55rem;
+}
+
+#nav-links li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#nav-links li a:hover{
+    color: #20d167b6;
+}
+
+#nav-links li a:active{
+    color: #000045;
+}
+
+#signup-btn{
+    border: none;
+    outline: none;
+    background-color: #33cc33;
+    padding:6px 14px;
+    cursor: pointer;
+    margin-left: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+#login-btn{
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+    padding: 6px 14px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 1rem;
+    color: #33dd33;
+}
+
+#signup-btn:active{
+    transform: scale(0.98);
+}
+
+#login-btn:active{
+    transform: scale(0.98);
+}
+
+.hamburger, .close {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger .fa-bars{
+    color: #ffffff;
+}
+
+.close .fa-times{
+    color: #ffffff;
+}
+
+@media (max-width: 768px){
+    #restaurant-logo{
+        width: 8rem;
+    }
+
+    .navbar{
+        padding: 1rem;
+    }
+
+    #nav-links{
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        background-color: #333;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 9; 
+        padding-top: 2.5rem;
+        padding-left: 1.7rem;
+    }
+
+    #nav-links a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #333;
+    }
+
+    #nav-links li {
+        margin: 5px 0;
+        border-bottom: 1px solid #222;
+        padding-bottom: 10px;
+    }
+
+    .button-container{
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    #signup-btn {
+        padding: 8px 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #33cc33;
+        border: none;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #login-btn{
+        padding: 8px 12px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #f2f2f2;
+        border: none;
+        color: #33dd33;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #signup-btn:hover {
+        background-color: #44bb44;
+    }
+
+    #login-btn:hover{
+        background-color: #44bb44;
+        color: #ffffff;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .close {
+        display: none; 
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size: 30px;
+        color: #fff;
+        z-index: 10;
+    }
+
+    #nav-links.active {
+        transform: translateX(0);
+    }
+
+    .hamburger.active {
+        display: none;
+    }
+
+    .close.active {
+        display: block;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 8; 
+    }
+
+    .overlay.active {
+        display: block;
+    }
+}
+
+/* @media (min-width: 500px) and (max-width: 768px){
+    #restaurant-logo{
+        width: 9rem;
+    }
+
+    .navbar{
+        padding: 1.5rem;
+    }
+
+    #nav-links{
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        background-color: #333;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 9; 
+    }
+
+    #nav-links li {
+        margin: 5px 0;
+        font-size: 22px;
+    }
+
+    #signup-btn{
+        padding:12px 8px;
+        margin-left: -0.01rem;
+        margin-bottom: 0.5rem;
+        color: #fff;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .close {
+        display: none; 
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size: 40px;
+        color: #fff;
+        z-index: 10;
+    }
+
+    #nav-links.active {
+        transform: translateX(0);
+    }
+
+    .hamburger.active {
+        display: none;
+    }
+
+    .close.active {
+        display: block;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 8; 
+    }
+
+    .overlay.active {
+        display: block;
+    }
+} */
+
+/* Header-Container Section */
+.header-container{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#s-head{
+    color: #f2f2f2;
+    letter-spacing: 3px;
+    padding-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.separator{
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+}
+
+#l-head{
+    font-size: 62px;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+/* Responsive media query  */
+@media (min-width: 200px) and (max-width: 425px){
+    .header-container{
+        width: 310px;
+    }
+
+    #l-head{
+        font-size: 36px;
+        font-weight: 500;
+        color: #ffffff;
+        letter-spacing: 2px;
+    }
+}
+
+/* Contact Us Section */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 900px;
+    width: 85%;
+    margin: 60px auto;
+}
+
+.info-section, .form-section {
+    padding: 20px;
+}
+
+.info-section {
+    background-color: #23d49c;
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-block {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #777;
+    text-align: center;
+}
+
+.info-block h2 {
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.info-block p {
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.form-section {
+    flex: 2;
+    min-width: 300px;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+form textarea{
+    flex: 1 1 100%;
+    resize: none;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background-color: #33cc33;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #04bb04;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .info-section, .form-section {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+}
+
+/* Location */
+.location{
+  width: 95%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.location iframe{
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    color: white;
+    padding-top: 40px;
+    
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    color: #33cc33;
+    margin-bottom: 10px;
+}
+
+.footer-column p, .footer-column ul, .footer-column a {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    color: #22aa22;
+}
+
+.footer-social a {
+    color: white;
+    margin-right: 10px;
+}
+
+.footer-social a:hover {
+    color: #11aa44;
+}
+
+.instagram-gallery a {
+    display: inline-block;
+    margin: 5px;
+}
+
+.instagram-gallery img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #111;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (min-width: 200px) and (max-width: 425px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        min-width: 100%;
+    }
+
+    .instagram-gallery img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 500px) {
+    
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        min-width: 100%;
+    }
+
+    .instagram-gallery img {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* Scroll To Top Section */
+#scrollBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+}
+  
+.bi-arrow-up-circle-fill {
+    font-size: 40px;
+    color: #002345;
+}
